@@ -196,7 +196,7 @@ Module['FS_createPath']("/", "res", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/res/Basic.frag", "start": 0, "end": 80}, {"filename": "/res/Basic.vert", "start": 80, "end": 148}], "remote_package_size": 148, "package_uuid": "ac56f936-b9f3-4d6e-b541-54a2d532b742"});
+    loadPackage({"files": [{"filename": "/res/Basic.frag", "start": 0, "end": 80}, {"filename": "/res/Basic.vert", "start": 80, "end": 148}], "remote_package_size": 148, "package_uuid": "b9a47902-3406-49aa-962e-b2952a0f77c7"});
 
   })();
 
