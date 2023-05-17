@@ -5843,6 +5843,7 @@ var ASM_CONSTS = {
       return 0;
     }
 
+
   function _fd_close(fd) {
   try {
   
@@ -6231,12 +6232,6 @@ var ASM_CONSTS = {
     }
 
   function _glDisable(x0) { GLctx['disable'](x0) }
-
-  function _glDrawArrays(mode, first, count) {
-  
-      GLctx.drawArrays(mode, first, count);
-  
-    }
 
   function _glDrawElements(mode, count, type, indices) {
   
@@ -6789,6 +6784,10 @@ var ASM_CONSTS = {
     }
   function _glUniform1i(location, v0) {
       GLctx.uniform1i(webglGetUniformLocation(location), v0);
+    }
+
+  function _glUniform3f(location, v0, v1, v2) {
+      GLctx.uniform3f(webglGetUniformLocation(location), v0, v1, v2);
     }
 
   var miniTempWebGLFloatBuffers = [];
@@ -8576,6 +8575,7 @@ var asmLibraryArg = {
   "emscripten_set_window_title": _emscripten_set_window_title,
   "environ_get": _environ_get,
   "environ_sizes_get": _environ_sizes_get,
+  "exit": _exit,
   "fd_close": _fd_close,
   "fd_read": _fd_read,
   "fd_seek": _fd_seek,
@@ -8602,7 +8602,6 @@ var asmLibraryArg = {
   "glDeleteVertexArrays": _glDeleteVertexArrays,
   "glDetachShader": _glDetachShader,
   "glDisable": _glDisable,
-  "glDrawArrays": _glDrawArrays,
   "glDrawElements": _glDrawElements,
   "glEnable": _glEnable,
   "glEnableVertexAttribArray": _glEnableVertexAttribArray,
@@ -8625,6 +8624,7 @@ var asmLibraryArg = {
   "glTexImage2D": _glTexImage2D,
   "glTexParameteri": _glTexParameteri,
   "glUniform1i": _glUniform1i,
+  "glUniform3f": _glUniform3f,
   "glUniformMatrix4fv": _glUniformMatrix4fv,
   "glUseProgram": _glUseProgram,
   "glValidateProgram": _glValidateProgram,
@@ -8734,7 +8734,7 @@ var dynCall_iiiiijj = Module["dynCall_iiiiijj"] = createExportWrapper("dynCall_i
 /** @type {function(...*):?} */
 var dynCall_iiiiiijj = Module["dynCall_iiiiiijj"] = createExportWrapper("dynCall_iiiiiijj");
 
-var ___emscripten_embedded_file_data = Module['___emscripten_embedded_file_data'] = 46472;
+var ___emscripten_embedded_file_data = Module['___emscripten_embedded_file_data'] = 46924;
 
 
 
