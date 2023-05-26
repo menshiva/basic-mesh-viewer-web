@@ -37,6 +37,7 @@ var Module = typeof Module != 'undefined' ? Module : {};
         if (!check) throw msg + new Error().stack;
       }
 Module['FS_createPath']("/", "res", true, true);
+Module['FS_createPath']("/res", "shaders", true, true);
       var start32 = Module['___emscripten_embedded_file_data'] >> 2;
       do {
         var name_addr = HEAPU32[start32++];
@@ -6540,6 +6541,10 @@ var ASM_CONSTS = {
       GLctx.uniform1i(webglGetUniformLocation(location), v0);
     }
 
+  function _glUniform2f(location, v0, v1) {
+      GLctx.uniform2f(webglGetUniformLocation(location), v0, v1);
+    }
+
   function _glUniform3f(location, v0, v1, v2) {
       GLctx.uniform3f(webglGetUniformLocation(location), v0, v1, v2);
     }
@@ -8379,6 +8384,7 @@ var asmLibraryArg = {
   "glTexParameteri": _glTexParameteri,
   "glUniform1f": _glUniform1f,
   "glUniform1i": _glUniform1i,
+  "glUniform2f": _glUniform2f,
   "glUniform3f": _glUniform3f,
   "glUniformMatrix4fv": _glUniformMatrix4fv,
   "glUseProgram": _glUseProgram,
@@ -8489,7 +8495,7 @@ var dynCall_iiiiijj = Module["dynCall_iiiiijj"] = createExportWrapper("dynCall_i
 /** @type {function(...*):?} */
 var dynCall_iiiiiijj = Module["dynCall_iiiiiijj"] = createExportWrapper("dynCall_iiiiiijj");
 
-var ___emscripten_embedded_file_data = Module['___emscripten_embedded_file_data'] = 50336;
+var ___emscripten_embedded_file_data = Module['___emscripten_embedded_file_data'] = 48952;
 
 
 
